@@ -5,6 +5,12 @@ genre = 'pop'
 print("Genre: '{}'\n".format(genre))
 album = 'Evolve'
 print("Album: '{}'\n".format(album))
+release_day = 23
+release_month = 'June'
+release_year = 2017
+print("Release date: '{}'\n".format(" ".join([release_month,
+                                              str(release_day),
+                                              str(release_year)])))
 artist = 'Imagine Dragons'
 print("Artist: '{}'\n".format(artist))
 members = ['Benjamin Arthur McKee',
