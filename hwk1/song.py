@@ -1,52 +1,52 @@
 # -*- coding: utf-8 -*-
 title = 'Whatever it takes'
-print("Title: '{}'\n".format(title))
+#print("Title: '{}'\n".format(title))
 genre = 'pop'
-print("Genre: '{}'\n".format(genre))
+#print("Genre: '{}'\n".format(genre))
 album = 'Evolve'
-print("Album: '{}'\n".format(album))
+#print("Album: '{}'\n".format(album))
 release_day = 23
 release_month = 'June'
 release_year = 2017
-print("Release date: '{}'\n".format(" ".join([release_month,
-                                              str(release_day),
-                                              str(release_year)])))
+#print("Release date: '{}'\n".format(" ".join([release_month,
+#                                              str(release_day),
+#                                              str(release_year)])))
 artist = 'Imagine Dragons'
-print("Artist: '{}'\n".format(artist))
+#print("Artist: '{}'\n".format(artist))
 members = ['Benjamin Arthur McKee',
            'Daniel Coulter Reynolds',
            'Daniel James Platzman',
            'Daniel Wayne Sermon']
-print("Members: \n{}\n".format("\n".join(members)))
+#print("Members: \n{}\n".format("\n".join(members)))
 hometown = {'Benjamin Arthur McKee':'Forestville, CA',
             'Daniel Coulter Reynolds': 'Las Vegas, NV',
             'Daniel James Platzman': 'Atlanta, GA',
             'Daniel Wayne Sermon': 'American Fork, UT'}
-print("Hometown per member: \n{}\n".format(hometown))
+#print("Hometown per member: \n{}\n".format(hometown))
 instrument = {'Benjamin Arthur McKee':'Bass',
               'Daniel Coulter Reynolds': 'Singer',
               'Daniel James Platzman': 'Percussion',
               'Daniel Wayne Sermon': 'Guitar'}
-print("Instruments per member: \n{}\n".format(instrument))
+#print("Instruments per member: \n{}\n".format(instrument))
 awards = ['MTV Video Music Award for Best Rock Video',
           'Teen Choice Award for Choice Rock Song']
-print("Awards: \n{}\n ".format("\n".join(awards)))
+#print("Awards: \n{}\n ".format("\n".join(awards)))
 songwritters = ['Benjamin Arthur McKee',
                 'Daniel Coulter Reynolds',
                 'Daniel James Platzman',
                 'Daniel Wayne Sermon', 
                 'Joel Little']
-print("Songwritters: \n{}\n".format("\n".join(songwritters)))
+#print("Songwritters: \n{}\n".format("\n".join(songwritters)))
 copyright = 'Whatever It Takes lyrics © Universal Music Publishing Group, Sony/ATV Music Publishing LLC'
-print("Copyright: '{}'\n".format(copyright))
+#print("Copyright: '{}'\n".format(copyright))
 availability = ['Spotify',
                 'Deezer',
                 'Play Music',
                 'Youtube',
                 'iTunes']
-print("Availability: \n{}\n".format("\n".join(availability)))
+#print("Availability: \n{}\n".format("\n".join(availability)))
 duration_sec = 3.39
-print("Duration in seconds: '{}'\n".format(duration_sec))
+#print("Duration in seconds: '{}'\n".format(duration_sec))
 lyrics = """Falling too fast to prepare for this
 Tripping in the world could be dangerous
 Everybody circling, it's vulturous
@@ -118,12 +118,12 @@ You take me to the top, I'm ready for
 Whatever it takes
 'Cause I love the adrenaline in my veins
 I do what it takes"""
-print("Lyrics: \n\"{}\"\n".format(lyrics))
+#print("Lyrics: \n\"{}\"\n".format(lyrics))
 lines = lyrics.split('\n')
-print("Lines: \n{}\n".format("\n".join(lines)))
+#print("Lines: \n{}\n".format("\n".join(lines)))
 num_lines = len(lines)
-print("Number of lines: '{}'\n".format(num_lines)) 
+#print("Number of lines: '{}'\n".format(num_lines)) 
 num_words = len(lyrics.split())
-print("Number of words: '{}'\n".format(num_words))
+#print("Number of words: '{}'\n".format(num_words))
 list_love = [i for i in lines if 'love' in i]
-print("List of sentences using the word 'love': \n{}\n".format("\n".join(list_love)))
+#print("List of sentences using the word 'love': \n{}\n".format("\n".join(list_love)))
