@@ -101,8 +101,8 @@ def check_winner(column, game):
 def main():
     player = 1
     winner = False
-    player_x = colored('Where do you want to put the X?: ', 'red', attrs=['bold', 'reverse'])
-    player_o = colored('Where do you want to put the O?: ', 'blue', attrs=['bold', 'reverse'])
+    player_x = colored('Where do you want to put your piece?: ', 'red', attrs=['bold', 'reverse'])
+    player_o = colored('Where do you want to put your piece?: ', 'blue', attrs=['bold', 'reverse'])
     while not winner:
         if player == 1:
             try:
