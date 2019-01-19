@@ -29,7 +29,7 @@ game = [[" ", " ", " ", " ", " ", " "],
 
 print_x = lambda x : cprint(x, 'red', 'on_white', attrs=['bold'], end="")
 print_o = lambda x : cprint(x, 'blue', 'on_white', attrs=['bold'], end="")
-diamond = u'\u2B2E'
+ellipse = u'\u2B2E'
 
 
 def print_board(game):
@@ -45,9 +45,9 @@ def print_board(game):
                         cprint("|", 'green', 'on_cyan')
                 else:
                     if game[new_col][new_row] == 'X':
-                        print_x(diamond)
+                        print_x(ellipse)
                     elif game[new_col][new_row] == 'O':
-                        print_o(diamond)
+                        print_o(ellipse)
                     else:
                         print_o(game[new_col][new_row])
         else:
