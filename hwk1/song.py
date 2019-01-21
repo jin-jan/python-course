@@ -103,5 +103,5 @@ You take me to the top, I'm ready for
 Whatever it takes
 'Cause I love the adrenaline in my veins
 I do what it takes"""}
-for key,values in dictionary.items():
-    print("key: {}\nvalues: {}\n".format(key,values))
+#for key,values in dictionary.items():
+#    print("key: {}\nvalues: {}\n".format(key,values))
