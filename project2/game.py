@@ -8,15 +8,14 @@ from utils import SCREEN, PURPLE
 
 def game():
     input_box = InputBox(440, 340, 480, 50)
-    quit_button = Button(540, 440, 100, 50, 'QUIT', 'quit')
-    start_button = Button(640, 440, 100, 50, 'START', 'start')
+    quit_button = Button(690, 520, 80, 50, 'QUIT', 'quit')
+    start_button = Button(680, 440, 100, 50, 'START', 'start')
     play = GuessWord()
     snowman = SnowMan()
     rand_word = play.random_word()
     print_word = [False for i in range(len(rand_word))]
     in_letter = []
     out_letter = []
-    print(rand_word)
 
     done = False
     start_game = False
@@ -32,7 +31,6 @@ def game():
 
         SCREEN.fill(PURPLE)
         quit_button.draw(SCREEN)
-        print(input_box.text)
 
         if len(out_letter) == 14:
             start_button.draw(SCREEN)
@@ -54,17 +52,28 @@ def game():
         snowman.wrong_letter = out_letter
         snowman.draw_snowman(SCREEN)
 
-        print(play.check_in(input_box.text, print_word))
         pg.display.flip()
 
 
 if __name__ == '__main__':
     end_game = False
+    player1_button = Button(200, 440, 140, 50, '1 Player', '1')
+    player2_button = Button(400, 440, 150, 50, '2 Players', '2')
     while not end_game:
         for event in pg.event.get():
             if event.type == pg.QUIT:
                 end_game = True
-                import pdb;pdb.set_trace()
                 pg.quit()
                 quit()
-        game()
+            player1 = player1_button.handle_event(event)
+            player2 = player2_button.handle_event(event)
+
+        SCREEN.fill(PURPLE)
+        player1_button.draw(SCREEN)
+        player2_button.draw(SCREEN)
+
+        if player1 == 1:
+            game()
+        if player2 == 2:
+            print('yes')
+        pg.display.flip()

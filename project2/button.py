@@ -21,6 +21,12 @@ class Button:
                 if self.action == 'start':
                     self.active = not self.active
                     self.start_action = True
+                if self.action == '1':
+                    self.active = not self.active
+                    self.start_action = 1
+                if self.action == '2':
+                    self.active = not self.active
+                    self.start_action = 2
             else:
                 self.active = False
             self.color = COLOR_ACTIVE if self.active else COLOR_INACTIVE
