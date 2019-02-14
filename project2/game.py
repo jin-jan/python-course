@@ -3,13 +3,15 @@ from snowman import SnowMan
 from input_box import InputBox
 from button import Button
 from guess_word import GuessWord
+from player import Player
 from utils import SCREEN, PURPLE
 
 
-def game():
+def game(players):
     input_box = InputBox(440, 340, 480, 50)
     quit_button = Button(690, 520, 80, 50, 'QUIT', 'quit')
     start_button = Button(680, 440, 100, 50, 'START', 'start')
+    player_text = Player(140, 160, 130, 50)
     play = GuessWord()
     snowman = SnowMan()
     rand_word = play.random_word()
@@ -36,6 +38,13 @@ def game():
             start_button.draw(SCREEN)
         else:
             if in_letter == list(rand_word):
+                if players:
+                    won = (len(in_letter) + len(out_letter)) %2
+                    if won:
+                        player_text.text = 'Player 2!'
+                    else:
+                        player_text.text = 'Player 1!'
+                    player_text.draw(SCREEN)
                 start_button.draw(SCREEN)
             else:
                 input_box.draw(SCREEN)
@@ -73,7 +82,7 @@ if __name__ == '__main__':
         player2_button.draw(SCREEN)
 
         if player1 == 1:
-            game()
+            game(False)
         if player2 == 2:
-            print('yes')
+            game(True)
         pg.display.flip()

@@ -15,7 +15,7 @@ class GuessWord:
         self.rect = []
         self.txt_surface = FONT.render('', True, self.color)
         self.txt_surf_win = FONT.render('You won!', True, ORANGE)
-        self.rect_win = pg.Rect(self.x + 150, self.y + 100, self.w, self.h)
+        self.rect_win = pg.Rect(self.x + 150, self.y + 60, self.w - 50, self.h - 80)
 
     def random_word(self):
         rand_num = random.randint(0, len(LIST_DICTIONARY) - 1)
@@ -44,7 +44,7 @@ class GuessWord:
             pg.draw.rect(screen, PURPLE, self.rect[i], 2)
             x = x + new_x + space
             w = w + new_x + space
-        if "".join(txt) == self.guess_word:
+        if all([' ' != i for i in txt]):
             screen.blit(self.txt_surf_win, (self.rect_win.x + 5, self.rect_win.y - 5))
             pg.draw.rect(screen, PURPLE, self.rect_win, 2)
 
